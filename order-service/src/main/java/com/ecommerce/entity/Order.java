@@ -8,103 +8,93 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "orders")
-public class Order { 
-	
-	 @Id
-	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	private Long customerId;
-	
-	private String customerName;
-	
-	private Long productId;
-	
-	private String productName;
-	
-	private Integer quantity;
-	
-	private Double amount;
-	
-	private String delieryAddress;
-	
-	private String status;
-	
-	
+public class Order {
 
-	public Long getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    private Long customerId;
+    private String customerName;
 
-	public Long getCustomerId() {
-		return customerId;
-	}
+    private Long productId;
+    private String productName;
 
-	public void setCustomerId(Long customerId) {
-		this.customerId = customerId;
-	}
+    private Integer quantity;
+    private Double amount;
 
-	public String getCustomerName() {
-		return customerName;
-	}
+    private String deliveryAddress;
+    private String status;
 
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public Long getProductId() {
-		return productId;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setProductId(Long productId) {
-		this.productId = productId;
-	}
+    public Long getCustomerId() {
+        return customerId;
+    }
 
-	public String getProductName() {
-		return productName;
-	}
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
 
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
+    public String getCustomerName() {
+        return customerName;
+    }
 
-	public Integer getQuantity() {
-		return quantity;
-	}
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
 
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
-	}
+    public Long getProductId() {
+        return productId;
+    }
 
-	public Double getAmount() {
-		return amount;
-	}
+    public void setProductId(Long productId) {
+        this.productId = productId;
+    }
 
-	public void setAmount(Double amount) {
-		this.amount = amount;
-	}
+    public String getProductName() {
+        return productName;
+    }
 
-	public String getDelieryAddress() {
-		return delieryAddress;
-	}
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
-	public void setDelieryAddress(String delieryAddress) {
-		this.delieryAddress = delieryAddress;
-	}
+    public Integer getQuantity() {
+        return quantity;
+    }
 
-	public String getStatus() {
-		return status;
-	}
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
-	
-	
+    public Double getAmount() {
+        return amount;
+    }
 
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public String getDeliveryAddress() {
+        return deliveryAddress;
+    }
+
+    public void setDeliveryAddress(String deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
