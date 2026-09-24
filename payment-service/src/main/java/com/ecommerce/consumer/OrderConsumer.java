@@ -3,7 +3,7 @@ package com.ecommerce.consumer;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
-import com.ecommerce.event.OrderCreatedEvent;
+import com.ecommerce.event.PaymentProcessedEvent;
 import com.ecommerce.service.PaymentService;
 
 @Service
@@ -19,7 +19,7 @@ public class OrderConsumer {
 
 	@KafkaListener(topics = "order-created", groupId = "payment-group")
 
-	public void consumerOrder(OrderCreatedEvent event) {
+	public void consumerOrder(PaymentProcessedEvent event) {
 
 		System.out.println("================================");
 		System.out.println("Order received by Payment Service");

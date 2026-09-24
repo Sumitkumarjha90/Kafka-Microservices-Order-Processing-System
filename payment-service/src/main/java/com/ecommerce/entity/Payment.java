@@ -10,29 +10,45 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="payment")
+@Table(name = "payment")
 public class Payment {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
+	private String paymentId;
 	private Long orderId;
-	
 	private Long customerId;
-	
 	private BigDecimal amount;
-	
 	private String paymentMethod;
-	
 	private String paymentStatus;
-	
+	private String reason;
 	private LocalDateTime createdAt;
 	
+	//created default constructor
 	public Payment() {
-		
+
 	}
 
+
+	public String getPaymentId() {
+		return paymentId;
+	}
+
+	public void setPaymentId(String paymentId) {
+		this.paymentId = paymentId;
+	}
+
+	public String getReason() {
+		return reason;
+	}
+
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
+
+	
 	public Long getId() {
 		return id;
 	}
@@ -88,10 +104,5 @@ public class Payment {
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
-	
-	
-	
-	
-	
 
 }
