@@ -2,6 +2,7 @@ package com.ecommerce.service;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
@@ -33,16 +34,17 @@ public class PaymentService {
 
 		PaymentProcessedEvent paymentEvent = new PaymentProcessedEvent();
 
-		paymentEvent.setEventId("PAY-" + System.currentTimeMillis());
+		paymentEvent.setEventId("PAY-" + UUID.randomUUID());
 		paymentEvent.setOrderId(event.getOrderId());
 		paymentEvent.setCustomerId(event.getCustomerId());
 		paymentEvent.setAmount(event.getAmount());
 		paymentEvent.setPaymentId(payment.getPaymentId());
 		paymentEvent.setPaymentMethod(event.getPaymentMethod());
 
-		// -------------------------
-		// PAYMENT VALIDATION
-		// -------------------------
+		
+		// PAYMENT VALIDATIONS  
+//	------------------------------------------------
+	
 
 		if (event.getAmount() == null || event.getAmount().compareTo(BigDecimal.ZERO) <= 0) {
 
