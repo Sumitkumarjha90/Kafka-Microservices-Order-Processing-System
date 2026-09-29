@@ -45,6 +45,8 @@ public class OrderService {
         // 4. Send event to Kafka
         kafkaProducer.sendOrderCreatedEvent(event);
         
+        System.out.println("Order created event sent");
+        
         return savedOrder;
         
 		

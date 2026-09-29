@@ -63,7 +63,6 @@ public class PaymentProcessedEvent {
 	}
 
 	
-
 	public Long getOrderId() {
 		return orderId;
 	}
